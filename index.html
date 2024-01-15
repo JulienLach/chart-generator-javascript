@@ -4,13 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
     <link rel=stylesheet href=css/style.css>
     <title>Chart-generator-Javascript</title>
 </head>
 
 <body>
-    <h1>Chrat Generator JavaScript</h1>
 
+    <div class="container">
+        <h1>ChartJS</h1>
+        <div class="chart-container">
+            <div id="canvas-container"></div>
+        </div>
+
+        <div class="controls">
+            <select id="chartType" class="select">
+                <option value="bar">Bar</option>
+                <option value="line">Line</option>
+                <option value="pie">Pie</option>
+                <option value="doughnut">Doughnut</option>
+                <option value="radar">Radar</option>
+            </select>
+            <input type="text" id="labelInput" class="input" placeholder="Label">
+            <input type="number" id="dataInput" class="input" placeholder="Data">
+            <button onclick="addData()" class="btn">Add Data</button>
+            <button onclick="updateChartType()" class="btn">Change Chart Type</button>
+        </div>
+
+    </div>
+
+
+
+    <!-- CDN ChatJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src=JS/script.js></script>
 </body>
 
